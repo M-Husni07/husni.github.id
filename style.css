@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0e0e10;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(20, 20, 25, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.logo { font-size: 1.2rem; font-weight: 600; }
+
+nav a {
+  margin-left: 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover, nav a.active { color: #00bcd4; }
+
+.hero, .content {
+  text-align: center;
+  padding: 10rem 2rem 5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #00bcd4;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #0097a7;
+  box-shadow: 0 0 10px #00bcd4;
+  transform: translateY(-3px);
+}
+
+.project-grid, .cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #1a1a1d;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 15px #00bcd4;
+}
+.card img, .cert-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.cert-grid img:hover { transform: scale(1.05); }
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #121214;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* 🔥 Efek animasi fade-slide */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
